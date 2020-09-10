@@ -1,0 +1,44 @@
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes change-background {
+  0% {
+    background-image: url("../img/philosophy__img_left.png");
+  }
+
+  100% {
+    background-image: url("../img/philosophy__img_left-2.png");
+  }
+}
+
+@keyframes change-background-scale {
+  0% {
+    background-size: 100% 100%;
+  }
+
+  100% {
+    background-size: 110% 110%;
+  }
+}

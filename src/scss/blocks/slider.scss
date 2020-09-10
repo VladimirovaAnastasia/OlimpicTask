@@ -1,0 +1,288 @@
+@import "../general/variables";
+
+.leaf {
+  position: absolute;
+  transition: transform 2s;
+}
+
+.slider {
+  position: relative;
+  left: 100vw;
+  transition: transform 5s, left 2s;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: $header-height;
+    height: calc(100vh - #{$header-height});
+  }
+
+  &__column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    margin-left: 97px;
+    height: 50%;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    overflow: hidden;
+
+    &--first {
+      background-color: white;
+      transition: display 2s;
+    }
+
+    &--intro {
+      background-image: url("../img/intro_bg.png");
+      overflow-y: hidden;
+      transition: background-size 1s;
+      background-size: 110% 110%;
+
+
+      &::before,
+      &::after {
+        content: '';
+        background-position-y: -$header-height;
+        position: absolute;
+        top: $header-height;
+        height: 100vh;
+        width: 100vw;
+        animation: fade-in 1s linear 1s both, up-down 3s linear 1s both infinite;
+      }
+
+      &::before {
+        background-image: url("../img/intro_bg-foggy-1.png");
+      }
+
+      &::after {
+        background-image: url("../img/intro_bg-foggy-2.png");
+      }
+
+      .slider__content {
+        flex-direction: column;
+        margin-left: $main-offset;
+      }
+    }
+
+    &--collection {
+      .slider__column:first-child .leaf{
+        left: 516px;
+        top: -103px;
+        width: 191px;
+        height: 222px;
+      }
+
+      .slider__row:last-child {
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: $minor-offset;
+
+        .leaf:nth-child(2){
+          bottom: 57px;
+          right: 732px;
+          width: 185.04px;
+          height: 83.79px;
+        }
+
+        .leaf:nth-child(3){
+          bottom: 416px;
+          right: 100px;
+          height: 54.18px;
+          width: 111.54px;
+        }
+      }
+
+      .slider__left-img {
+        background-image: url("../img/collection__img_left.png");
+        transition: background-size 2s;
+        background-size: 110% 110%;
+        width: 516px;
+        height: 681px;
+        margin-left: $main-offset;
+      }
+
+      .slider__right-img {
+        background-image: url("../img/collection__img_right.png");
+        transition: background-size 2s;
+        background-size: 110% 110%;
+        width: 593px;
+        height: 382px;
+      }
+
+      p {
+        margin-top: 45px;
+      }
+    }
+
+    &--philosophy {
+      .slider__content {
+        margin-top: 0;
+        height: 100vh;
+      }
+
+      .slider__row:first-child {
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        .leaf:nth-child(2) {
+          top: 425px;
+          right: 560px;
+          width: 96px;
+          height: 80px;
+        }
+        .leaf:nth-child(3) {
+          top: 803px;
+          right: 102px;
+          width: 142px;
+          height: 94px;
+        }
+      }
+
+      .slider__column:first-child {
+        background-image: url("../img/philosophy__img_left.png");
+        //background-size: 110% 110%;
+        max-width: 643px;
+        width: 100%;
+        animation: change-background-scale 2s infinite forwards;
+
+        .leaf {
+          top: 315px;
+          left: 650px;
+          width: 159.32px;
+          height: 72.14px;
+        }
+      }
+
+      .slider__right-img {
+        background-image: url("../img/philosophy__img_right.png");
+        transition: background-size 2s;
+        background-size: 110% 110%;
+        width: 593px;
+        height: 376px;
+        margin-right: $main-offset;
+      }
+
+      p {
+        margin-top: 45px;
+      }
+    }
+
+    &--my-greenfield {
+      .slider__content {
+        flex-direction: column;
+      }
+      .slider__video {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url("../img/video_bg.png");
+        max-width: 1666px;
+        max-height: 745px;
+        height: 100%;
+        width: 100%;
+      }
+      .slider__video-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 152px;
+        height: 152px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+    }
+
+    &--new {
+      .slider__content {
+        margin-top: 0;
+        height: 100vh;
+      }
+
+      .slider__column .leaf {
+        top: 140px;
+        left: 760px;
+      }
+
+      .slider__row{
+        margin-top: 234px;
+        margin-left: 309px;
+
+        .leaf:first-of-type {
+          top: 318px;
+        }
+
+        .leaf:last-of-type {
+          top: 689px;
+        }
+      }
+
+      .slider__left-img {
+        max-width: 661px;
+      }
+
+      .slider__right-img {
+        position: absolute;
+        top: 323px;
+        min-width: 1055px;
+        height: 657px;
+      }
+
+      p {
+        margin-top: 45px;
+      }
+
+      .button {
+        margin-top: 80px;
+        width: 269px;
+        padding: 16px 0;
+        font-family: 'OpiumNewC', serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        border: 5px solid #066035;
+        letter-spacing: -0.36px;
+        text-align: center;
+
+        color: #066035;
+      }
+    }
+  }
+}
+
+.slider__item--intro.active {
+  background-size: 100% 100%;
+}
+
+.slider__item--collection.active {
+  .slider__left-img, .slider__right-img {
+    background-size: 100% 100%;
+  }
+}
+
+.slider__item--philosophy.active {
+  .slider__right-img {
+    background-size: 100% 100%;
+  }
+
+  .slider__column:first-child {
+    animation: change-background 3.5s infinite alternate;
+  }
+}
+

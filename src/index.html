@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <title>Pure JavaScript Excel</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <header class="header">
+      <button class="menu-button header__button"></button>
+      <div class="main-menu">
+        <div class="main-menu__content">
+          <div class="main-menu__column">
+            <ul class="menu-nav">
+              <li>
+                <a class="main-menu__main-text" href="#top" data-href="top">Философия</a>
+              </li>
+              <li>
+                <a class="main-menu__main-text" href="#story" data-href="story">Коллекции</a>
+              </li>
+              <li>
+                <a class="main-menu__main-text" href="#prizes" data-href="prizes">Мой Greenfield</a>
+              </li>
+              <li>
+                <a class="main-menu__main-text" href="#rules" data-href="rules">Что нового</a>
+              </li>
+            </ul>
+            <ul class="general">
+              <li>
+                <a class="main-menu__minor-text" href="#" >Представительства в мире</a>
+              </li>
+              <li>
+                <a class="main-menu__minor-text" href="#" >Оптовым клиентам</a>
+              </li>
+              <li>
+                <a class="main-menu__minor-text" href="#">Обратная связь</a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-menu__column">
+            <h4 class="main-menu__main-text">Контакты</h4>
+            <ul class="contacts">
+              <li>
+                <a class="main-menu__minor-text" href="#" >GREENFIELD TEA Ltd., London, W1U 2HQ, UK</a>
+              </li>
+              <li>
+                <a class="main-menu__minor-text" href="#" >Email: yourmail@greenfield.uk</a>
+              </li>
+              <li>
+                <a class="main-menu__minor-text" href="#">Phone: +7 (356) 873 598 68</a>
+              </li>
+              <li>
+                <a class="main-menu__minor-text" href="#">Fax: +7 (356) 765 945 34</a>
+              </li>
+            </ul>
+
+            <h4 class="main-menu__text">Мы в социальных сетях</h4>
+            <ul class="social-networks">
+              <li class="social-networks__item">
+                <a href="#" ></a>
+              </li>
+              <li class="social-networks__item">
+                <a  href="#" ></a>
+              </li>
+              <li class="social-networks__item">
+                <a  href="#" ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img class="logo" src="img/logo_white.svg" alt="">
+      <button class="lang header__button">En</button>
+    </header>
+
+      <div class="slider">
+        <div id="intro" class="slider__item slider__item--intro slider__item--hidden">
+          <div class="slider__content">
+            <h1>Обретая  </br> Гармонию. </br> Обретая  </br> себя.</h1>
+            <small>Погрузитесь в философию Greenfield</small>
+          </div>
+        </div>
+        <div id="collection" class="slider__item slider__item--collection slider__item--hidden">
+          <div class="slider__content">
+            <div class="slider__column">
+              <div class="slider__left-img"></div>
+              <img class="leaf" src="img/leaf_3.png" alt="">
+            </div>
+            <div class="slider__column">
+              <div class="slider__row">
+                <h2>Ускользающее мгновение, воплощенное в чашечке чая...</h2>
+                <p>Среди бесконечного разнообразия чая есть сорта, имеющие особое значение. И только они таят особый магнетизм, который заставляет следовать совету Оскара Уайльда, считавшего, что существует лишь единственный способ противостоять искушению – поддаться ему.</p>
+              </div>
+              <div class="slider__row">
+                <div class="slider__right-img"></div>
+                <img class="leaf" src="img/leaf_2.png" alt="">
+                <img class="leaf" src="img/leaf_4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="philosophy" class="slider__item slider__item--philosophy slider__item--hidden">
+          <div class="slider__content">
+            <div class="slider__column">
+              <img class="leaf" src="img/leaf_2.png" alt="">
+            </div>
+            <div class="slider__column">
+              <div class="slider__row">
+                <div class="slider__right-img"></div>
+                <img class="leaf" src="img/leaf_5.png" alt="">
+                <img class="leaf" src="img/leaf_4.png" alt="">
+              </div>
+              <div class="slider__row">
+                <h2>Красота вечно изменчивой природы.</h2>
+                <p>Неподвластные мимолетному дыханию популярности, сорта чая обладают той высокой мерой вкуса, которая рождается из сочетания традиций, совершенства обработки чайных листьев и красоты вечно изменчивой природы.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="my-greenfield" class="slider__item slider__item--my-greenfield slider__item--hidden">
+          <div class="slider__content">
+            <div class="slider__video">
+              <img class="slider__video-icon" src="img/icon_play.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div id="new" class="slider__item slider__item--new slider__item--hidden" >
+          <div class="slider__content">
+            <div class="slider__column">
+              <img class="slider__left-img" src="img/new__img-left.png" alt="">
+              <img class="slider__right-img" src="img/img__tea-boxes.png" alt="">
+              <img class="leaf" src="img/leaf_2.png" alt="">
+            </div>
+            <div class="slider__column">
+              <div class="slider__row">
+                <h2>Разнообразный мир Greenfield.</h2>
+                <p>Познакомьтесь со всей коллекцией чая, она объединяет изысканные сорта черного и зеленого чая, чай оолонг и великолепные чайные композиции с натуральными фруктами, ягодами, травами и специями. Здесь вы точно найдете ваш  личный источник вдохновения и гармонии внутри... </p>
+                <a class="button" href="#">Перейти к коллекции</a>
+                <img class="leaf" src="img/leaf_1.png" alt="">
+                <img class="leaf" src="img/leaf_3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "~normalize.css";
+@import "general/variables.scss";
+@import "general/scaffolding.scss";
+@import "general/animation.scss";
+
+
+@import "blocks/header.scss";
+@import "blocks/slider.scss";
+@import "blocks/menu.scss";
+
+#app {
+  position: relative;
+}
+h1{
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100px;
+  line-height: 100px;
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #FFFEFE;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 70px;
+  margin: 0;
+
+  color: #393838;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  font-family: 'Ubuntu', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+
+  color: #393838;
+}
+
+small {
+  font-family: 'OpiumNewC', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #FFFEFE;
+}
