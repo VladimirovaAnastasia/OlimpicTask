@@ -3,7 +3,6 @@
 
 @import "~normalize.css";
 @import "general/variables.scss";
-@import "general/scaffolding.scss";
 @import "general/animation.scss";
 
 @import "blocks/header.scss";
@@ -20,14 +19,13 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 700px;
   font-size: 1.8rem;
   line-height: 1.1;
   font-weight: 600;
   overflow: hidden;
   font-family: 'Ubuntu', serif;
-
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
