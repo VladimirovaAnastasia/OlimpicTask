@@ -8,7 +8,7 @@
 .slider {
   position: relative;
   left: 100vw;
-  transition: transform 5s, left 2s;
+  transition: transform 2s, left 2s;
   display: flex;
   flex-direction: row;
   z-index: 1;
@@ -19,6 +19,8 @@
     justify-content: center;
     margin-top: $header-height;
     height: calc(100vh - #{$header-height});
+    transform: translate(100vw);
+    transition: transform 2s 0.5s;
   }
 
   &__column {
@@ -34,12 +36,17 @@
     height: 50%;
   }
 
+  &__text {
+    transition: transform 4s;
+  }
+
   &__item {
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
+    min-width: $min-width;
     z-index: 1;
     overflow: hidden;
 
@@ -64,6 +71,7 @@
         height: 100vh;
         width: 100vw;
         animation: fade-in 1s linear 1s both, up-down 3s linear 1s both infinite;
+        min-width: $min-width;
       }
 
       &::before {
@@ -75,6 +83,7 @@
       }
 
       .slider__content {
+        transform: translate(0);
         flex-direction: column;
         margin-left: $main-offset;
       }
@@ -156,10 +165,8 @@
 
       .slider__column:first-child {
         background-image: url("../img/philosophy__img_left.png");
-        //background-size: 110% 110%;
         max-width: 643px;
         width: 100%;
-        animation: change-background-scale 2s infinite forwards;
 
         .leaf {
           top: 315px;
@@ -192,6 +199,8 @@
         left: 50%;
         transform: translateX(-50%);
         background-image: url("../img/video_bg.png");
+        transition: background-size 2s;
+        background-size: 110% 110%;
         max-width: 1666px;
         max-height: 745px;
         height: 100%;
@@ -204,6 +213,7 @@
         width: 152px;
         height: 152px;
         transform: translate(-50%, -50%);
+        transition: left 2s;
         cursor: pointer;
       }
     }
@@ -241,10 +251,19 @@
         top: 323px;
         min-width: 1055px;
         height: 657px;
+        transform: translate(100px);
+        transition: transform 1s 1s;
+      }
+
+      h2 {
+        transform: translate(100px);
+        transition: transform 1.6s 1s;
       }
 
       p {
         margin-top: 45px;
+        transform: translate(100px);
+        transition: transform 2s 1s;
       }
 
       .button {
@@ -256,11 +275,16 @@
         font-weight: bold;
         font-size: 18px;
         line-height: 30px;
-        border: 5px solid #066035;
+        border: 5px solid $green-dark;
         letter-spacing: -0.36px;
         text-align: center;
+        color: $green-dark;
+        transition: color 1s, background-color 1s, transform 1.3s 1s;
 
-        color: #066035;
+        &:hover {
+          background-color: $green-dark;
+          color: #FFFEFE;
+        }
       }
     }
   }
@@ -286,3 +310,8 @@
   }
 }
 
+.slider__item--my-greenfield.active {
+  .slider__video {
+    background-size: 100% 100%;
+  }
+}

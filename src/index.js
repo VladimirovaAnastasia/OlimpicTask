@@ -6,27 +6,30 @@ import './scss/index.scss'
 const $button = document.querySelector('.menu-button');
 const $menu = document.querySelector('.main-menu');
 
+
 $button.onclick = function() {
     if ($menu.classList.contains('main-menu--active')) {
-        $menu.classList.remove('main-menu--active')
+        $menu.classList.remove('main-menu--active');
+        $button.classList.remove('menu-button--active')
     } else {
         $menu.classList.add('main-menu--active');
+        $button.classList.add('menu-button--active');
         window.addEventListener(`click`, toogleMenu)
     }
-}
+};
 
 const toogleMenu = (e) => {
     if (!e.target.classList.contains('menu-button')) {
-        $menu.classList.remove('main-menu--active')
+        $menu.classList.remove('main-menu--active');
+        $button.classList.remove('menu-button--active');
         window.removeEventListener(`click`, toogleMenu)
     }
-}
+};
 
 
 window.addEventListener(`load`, () => {
     const fullPageScroll = new FullPageScroll();
     fullPageScroll.init();
     fullPageScroll.slider.style.left = '0'
-
-})
+});
 

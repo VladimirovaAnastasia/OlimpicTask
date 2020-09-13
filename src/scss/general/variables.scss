@@ -1,26 +1,7 @@
-$c-light: #ffffff;
-$c-dark: #5432;
+$green-dark: #066035;
+
 $header-height: 110px;
-
-$font: "Proxima Nova", "Arial", sans-serif;
-$font-alt: "Radical",  "Arial", sans-serif;
-
-$stop-scaling: 2000px;
-
-$wide-screen: "min-aspect-ratio: 1680/650";
-
-$wider: "min-aspect-ratio: 1441/760";
-$narrower: "max-aspect-ratio: 1439/760";
-
-$tablet: 1024px;
-$mobile: 768px;
-
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
-
-$index: 1.38871;
-
-$animation-function-1: cubic-bezier(0, 0.83, 0.16, 1);
+$min-width: 1600px;
 
 $main-offset: 127px;
 $minor-offset: 50px

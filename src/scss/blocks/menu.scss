@@ -47,6 +47,7 @@
 
     color: #202020;
     margin-bottom: 25px;
+    transition: color 1s;
   }
 
   &__minor-text {
@@ -62,6 +63,7 @@
 
     color: #202020;
     margin-bottom: 21px;
+    transition: color 1s;
   }
 
   &__text {
@@ -111,23 +113,31 @@
   flex-direction: row;
 
   &__item {
-    width: 50px;
-    height: 50px;
+    border: $green-dark solid 2px;
+    border-radius: 50%;
     margin-right: 25px;
     cursor: pointer;
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: $green-dark;
+
+      .social-networks__icon path{
+        fill: #FFFFFF;
+        transition: fill 1s;
+      }
+    }
+
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+    }
   }
 
-  &__item:nth-child(1) {
-    background-image: url("../img/icon__tw.svg")
-  }
-
-  &__item:nth-child(2) {
-    background-image: url("../img/icon__inst.png")
-  }
-
-  &__item:nth-child(3) {
-    background-image: url("../img/icon__vk.svg")
-  }
 }
 
 

@@ -4,6 +4,7 @@
   position: absolute;
   height: $header-height;
   width: 100vw;
+  min-width: $min-width;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,11 +13,15 @@
 
   &__button {
     font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: #FFFFFF;
     border: none;
+    transition: background-color 1s;
     cursor: pointer;
     z-index: 10;
 
@@ -27,13 +32,45 @@
   }
 }
 .menu-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-left: $minor-offset;
-}
 
-.menu-button::before {
-  content: url("../img/icon_menu.png");
-  width: 22px;
-  height: 12px;
+  &__item {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin-bottom: 3px;
+    background: #000000;
+    border-radius: 3px;
+    z-index: 1;
+    transition: transform 1s;
+  }
+
+  &__item:last-child {
+    left: -4px;
+    width: 14px;
+    margin-bottom: 0;
+    opacity: 1;
+    transition: opacity 1s 0.5s;
+  }
+
+  &--active {
+    .menu-button__item:nth-child(1) {
+      transform: rotate(45deg) translate(2px, 3px);
+    }
+    .menu-button__item:nth-child(2) {
+      transform: rotate(-45deg) translate(0px, -2px);
+    }
+    .menu-button__item:nth-child(3) {
+      opacity: 0;
+    }
+  }
+
 }
 
 .lang {
@@ -52,4 +89,14 @@ button {
 .logo {
   width: 180px;
   height: 58px;
+
+}
+
+.main-logo.active path {
+  fill: #FFFFFF;
+}
+
+.main-logo path {
+  fill: $green-dark;
+  transition: fill 2s;
 }
